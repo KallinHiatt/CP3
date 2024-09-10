@@ -6,3 +6,4 @@ r = input("")
 bad = "The dog."
 print(bad)
 print("How are you today?")
+print("Something is odd.")

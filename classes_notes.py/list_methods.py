@@ -1,4 +1,5 @@
-mylist = [ 4, 6, 8, 1.5, 5, 10, 7]
+from functools import reduce
+mylist = [ 4, 6, 8, 1, 5, 10, 7]
 
 newlist = ["", "Argentina", "", "Brazil", "Chile", "", "Columbia", "", "Ecuador", "", "Venezuela"]
 
@@ -11,7 +12,7 @@ print(mylist)
 print(newlist)
 #this works, but there is a better way to create the code:
 
-mylist = [ 4, 6, 8, 1.5, 5, 10, 7]
+mylist = [ 4, 6, 8, 1., 5, 10, 7]
 newlist = []
 
 def increase(num):
@@ -30,3 +31,10 @@ def multiple(num):
     
 print(list(filter(multiple, mylist)))
 print(list(filter(lambda num: num %3, mylist)))
+
+multiplier = lambda x, y: x*y
+
+print(list(reduce(multiplier, mylist)))
+#print([class].mro())
+"""def __lt__(self, other):
+    return(self.name < other.name)"""

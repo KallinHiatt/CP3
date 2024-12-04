@@ -1,0 +1,66 @@
+"""BoxLayout:
+    orientation: 'vertical'
+
+    Label:
+        text: 'Enter your name: '
+        font_size: 50
+
+    TextInput:
+        id: user_input
+        multiline: False
+
+    Button:
+        text: 'No'
+        on_press: output_label.text = 'Hello, ' + user_input.text
+
+    Label:
+        id: output_label
+        text: 'Welcome!'
+    CheckBox:
+        id: check_box
+        active: True
+    Label:
+        text: "Check this out..."
+    Slider:
+        id: slider_value
+        min:0
+        max:100
+        value: 50
+    Switch:
+        id: Switch
+    Label:
+        text: "3"
+    ProgressBar:
+        max: 100
+        value: slider_value
+    Image:
+        source: ''
+        allow_stretch: True
+        keep ratio: True
+GridLayout:
+    cols: 3
+
+    Button:
+        text: '1'
+    Button:
+        text: '2'
+    Button:
+        text: '3'
+        """
+FloatLayout:
+    Button:
+        text: "top left"
+        size_hint: 0.2, 0.1
+        pos_hint: {'x': 0.4, 'y': 0.45}
+
+ScreenManager:
+    id: screen_manager
+    transition: NoTransition()
+
+    Screen:
+        name: 'Home_screen'
+
+        Button:
+            text: 'Go to settings'
+            on_press: screen_manager.current = 'settings_screen'
+        
